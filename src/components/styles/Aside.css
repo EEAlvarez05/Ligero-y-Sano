@@ -1,0 +1,105 @@
+:root{
+    /*------ASIDE Y ARTICLE!------*/
+
+        /*---light---*/
+        --c-subtitle:#f5f5f5;
+        --bg-subtitle:#3f9bbf;
+        --bg-text:#e5eeeeb4;
+        --shadow:#00000065;
+
+        /*---dark---*/
+        --dark-bg-subtitle:#83d3ff;
+        --dark-bg-text:#2a2a2ab4;
+        
+
+        /*---fonts---*/
+        --f-title: "Playwrite US Trad", serif;
+    }
+    
+/*------ASIDE------*/
+
+aside{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 0;
+}
+
+.aside__welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aside__welcome h3{
+    background-color: var(--bg-subtitle);
+    color: var(--c-subtitle);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.aside__welcome p{
+    background-color: var(--bg-text);
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 8px 8px 10px var(--shadow);
+}
+
+/*------ASIDE------*/
+
+article{
+    padding: 60px 20px 30px;
+}
+.aside__who-we-are{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aside__who-we-are h3{
+    background-color: var(--bg-subtitle);
+    color: var(--c-subtitle);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.aside__who-we-are p{
+    background-color: var(--bg-text);
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 8px 8px 10px var(--shadow);
+}
+
+/*------DARK THEME------*/
+
+.dark .aside__welcome p{
+    background-color: var(--dark-bg-text);
+}
+
+.dark .aside__who-we-are p{
+    background-color: var(--dark-bg-text);
+}
+/*---RESPONSIVE TABLET------*/
+@media screen and (min-width: 768px){}
+/*---RESPONSIVE DESKTOP------*/
+@media screen and (min-width: 980px){
+    aside{
+        padding: 100px 40px 0;
+    }
+    article{
+        padding: 100px 40px 60px;
+    }
+    .aside__welcome h3{
+        font-size: 24px;
+    }
+    .aside__welcome p{
+        padding: 40px;
+        font-size: 22px;
+    }
+    .aside__who-we-are h3{
+        font-size: 24px;
+    }
+    .aside__who-we-are p{
+        padding: 40px;
+        font-size: 22px;
+    }
+}

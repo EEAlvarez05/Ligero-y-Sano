@@ -1,0 +1,146 @@
+:root{
+    /*------MAIN!------*/
+    
+        /*---light---*/
+        --c-main-subtitle:#3f9bbf;
+        --c-text:#4a4a4a;
+        --bg-card:#e5eeee;
+        --c-card:#3f9bbf;
+        --c-subtitle:#f5f5f5;
+        --bg-subtitle:#3f9bbf;
+        --bg-text:#e5eeeeb4;
+        --shadow:#00000065;
+        
+        /*---dark---*/
+        --dark-main-c-subtitle:#83d3ff;
+        --dark-c-text:#f5f5f5;
+        --dark-bg-card:#2a2a2a;
+        --dark-c-card:#83d3ff;
+        --dark-bg-subtitle:#83d3ff;
+        --dark-bg-text:#2a2a2ab4;
+    
+        /*---fonts---*/
+        --f-title: "Playwrite US Trad", serif;
+    }
+    
+    
+/*-------MAIN------*/
+
+.main__title-recipe h2{
+    color: var(--c-main-subtitle);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+.main__description p{
+    margin: 0 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+.main__tip-title{
+    display: flex;
+    justify-content: center;
+}
+.main__tip-title h4{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: var(--bg-subtitle);
+    color: var(--c-subtitle);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.main__tip{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+}
+.tip p{
+    background-color: var(--bg-text);
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 8px 8px 10px var(--shadow);
+}
+.main__recipes{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.recipes--card{
+    background-color: var(--bg-card);
+    width: 200px;
+    box-shadow: 8px 8px 10px var(--shadow);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.recipes--card h4{
+    color: var(--c-card);
+    font-size: 18px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.recipes--card img{
+    width: 100%;
+    display: block;
+}
+
+/*------DARK THEME------*/
+.dark .main__title-recipe h2{
+    color: var(--dark-main-c-subtitle);
+}
+.dark .tip p{
+    background-color: var(--dark-bg-text);
+}
+.dark .recipes--card{
+    background-color: var(--dark-bg-card);
+}
+.dark .recipes--card h4{
+    color: var(--dark-c-card);
+}
+/*---RESPONSIVE TABLET------*/
+@media screen and (min-width: 768px){
+    .main__description{
+        padding: 40px;
+    }
+    .main__tip{
+        padding: 50px;
+        margin: 0 20px;
+    }
+    .tip{
+        font-size: 20px;
+    }
+}
+/*---RESPONSIVE DESKTOP------*/
+@media screen and (min-width: 980px){
+    .main__title-recipe h2{
+        font-size: 40px;
+    }
+    .main__description{
+        margin: 10px 40px;
+        padding: 40px;
+        font-size: 20px;
+    }
+    .main__tip-title h4{
+        font-size: 24px;
+    }
+    .main__tip{
+        padding: 50px;
+        margin: 0 40px;
+    }
+    .tip p{
+        padding: 50px;
+        font-size: 20px;
+    }
+    .recipes--card{
+        width: 350px;
+    }
+}

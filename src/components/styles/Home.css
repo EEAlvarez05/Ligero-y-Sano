@@ -1,0 +1,158 @@
+:root{
+    /*------MAIN!------*/
+    
+        /*---light---*/
+        --c-main-subtitle:#3f9bbf;
+        --c-text:#4a4a4a;
+        --bg-card:#e5eeee;
+        --c-card:#3f9bbf;
+        --shadow:#00000065;
+        
+        /*---dark---*/
+        --dark-main-c-subtitle:#83d3ff;
+        --dark-c-text:#f5f5f5;
+        --dark-bg-card:#2a2a2a;
+        --dark-c-card:#83d3ff;
+    
+        /*---fonts---*/
+        --f-title: "Playwrite US Trad", serif;
+    }
+    
+    
+/*-------MAIN------*/
+
+main{
+    margin-top: 15px;
+}
+
+.main__recipe-title h3{
+    margin: 20px 0;
+    font-size: 20px;
+    color: var(--c-main-subtitle);
+    text-align: center;
+    font-weight:900;
+}
+
+.main__card{
+    margin: 40px 0;
+}
+.card--container{
+    background-color: var(--bg-card);
+    width: 300px;
+    margin: auto;
+    box-shadow: 8px 8px 10px var(--shadow);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.card--container h4{
+    color: var(--c-card);
+    font-size: 18px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card--container img{
+    width: 100%;
+    display: block;
+}
+
+
+
+
+.main__title .mtitle--title h3{
+    margin: 50px 0 15px;
+    font-size: 20px;
+    color: var(--c-main-subtitle);
+    text-align: center;
+    font-weight:900;
+}
+
+.main__title .mtitle--text{
+    margin: 0 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.main__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 10px 80px;
+}
+
+.list--container{
+    background-color: var(--bg-card);
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px var(--shadow);
+}
+
+.list--text h4{
+    color: var(--c-card);
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.list--icon i{
+    color: var(--c-card);
+    width: 160px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+/*------DARK THEME------*/
+.dark .main__recipe-title h3{
+    color: var(--dark-main-c-subtitle);
+}
+.dark .card--container{
+    background-color: var(--dark-bg-card);
+}
+.dark .card--container h4{
+    color: var(--dark-c-card);
+}
+.dark .main__title .mtitle--title h3{
+    color: var(--dark-main-c-subtitle);
+}
+.dark .list--container{
+    background-color: var(--dark-bg-card);
+}
+.dark .list--text h4{
+    color: var(--dark-c-card);
+}
+.dark .list--icon i{
+    color: var(--dark-c-card);
+}
+/*---RESPONSIVE TABLET------*/
+@media screen and (min-width: 768px){
+    .main__list{
+        gap: 30px;
+    }
+    .main__title .mtitle--text{
+        margin: 5px 20px;
+        padding: 30px;
+    }
+}
+/*---RESPONSIVE DESKTOP------*/
+@media screen and (min-width: 980px){
+    .main__recipe-title h3{
+        font-size: 22px;
+    }
+    .main__list{
+        gap: 60px;
+        padding: 40px 5px 80px;
+    }
+    .main__title .mtitle--title h3{
+        font-size: 22px;
+    }
+    .main__title .mtitle--text{
+        margin: 10px 40px;
+        padding: 40px;
+        font-size: 20px;
+    }
+}

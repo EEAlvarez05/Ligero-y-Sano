@@ -1,0 +1,272 @@
+:root{
+/*------HEADER Y NAV!------*/
+
+    /*---light---*/
+    --bg-header:#e5eeee;
+    --c-header:#3f9bbf;
+    --bg-nav:#131e29;
+    --blur-nav:#00000065;
+    --c-nav:#94b8d7;
+    --bg-switch:#94b8d7;
+    --c-switch:#ffffff;
+    --c-button-menu:#3f9bbf;
+    --bg-switch:#94b8d7;
+    --c-switch:#fff;
+    /*---desktop---*/
+    --pc-c-nav:#3f9bbf;
+    
+    /*---dark---*/
+    --dark-bg-header:#2a2a2a;
+    --dark-c-header:#83d3ff;
+    --dark-bg-nav:#121724;
+    --dark-c-button-menu:#83d3ff;
+    /*---desktop---*/
+    --dark-pc-c-nav:#83d3ff;
+
+    /*---fonts---*/
+    --f-title: "Playwrite US Trad", serif;
+}
+
+
+/*-------HEADER------*/
+
+header{
+    background-color: var(--bg-header);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.header__title h1{
+    color: var(--c-header);
+    font-family: var(--f-title);
+    font-size: 30px;
+}
+
+.menu--span i{
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    font-size: 3em;
+    color: var(--c-button-menu);
+}
+.menu--span .fa-x{
+    display: none;
+}
+/*---TOGGLE THEME DARK LIGHT---*/
+.nav__switch{
+    background-color: var(--bg-switch);
+    width: 90px;
+    height: 45px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav__switch .switch--icons {
+    display: flex;
+    gap: 10px;
+    font-size: 35px;
+    color: var(--c-switch);
+}
+.icons--circle{
+    position: absolute;
+    background-color: var(--c-switch);
+    border-radius: 100%;
+    top: 5px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    transition: all .2s ease;
+}
+
+.dark .icons--circle{
+    transform: translateX(45px);
+}
+
+/*------NAVBAR------*/
+.nav__mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+.nav__mobile section{
+    position: absolute;
+    right: 45%;
+    top: 35px;
+    display: block;
+}
+.nav__desktop{
+    display: none;
+}
+.nav__navbar{
+    display: flex;
+    background-color: var(--bg-nav);
+    color: var(--c-nav);
+    width: 65%;
+}
+.nav__navbar a{
+    color: var(--c-nav);
+}
+.nav__blur{
+    width: 35%;
+    background-color: var(--blur-nav);
+    backdrop-filter:blur(1.7px);
+}
+.nav__navbar ul{
+    font-size: 22px;
+    list-style: none;
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    gap: 15px;
+}
+.nav__navbar ul li{
+    margin: 0 20px;
+    padding: 5px;
+}
+.nav__navbar ul li i{
+    margin-right: 10px;
+    font-size: 22px;
+}
+.nav__navbar ul li button{
+    color: var(--c-nav);
+    font-size: 22px;
+}
+.link--button{
+    position: relative;
+}
+.nav__navbar ul li button .fa-caret-down{
+    margin-left: 10px;
+}
+section{
+    display: none;
+}
+.nav__dropdown {
+    position: absolute;
+    left: -20px;
+    top: 35px;
+    width: 130%;
+    padding: 30px 5px;
+    display: none;
+}
+.nav__dropdown ul{
+    margin-top: 0;
+}
+.nav__dropdown ul li{
+    width: 100%;
+    margin: 0;
+}
+
+/*------NAVBAR ACTIVE-------*/
+.nav__active .nav__mobile{
+    transform: translateX(0%);
+}
+.nav__active .menu--span .fa-x{
+    display: block;
+}
+.nav__active .menu--span .fa-bars{
+    display: none;
+}
+
+
+/*------NAVBAR DROPDOWN-------*/
+.nav__dropdown-active .nav__navbar ul li button .fa-caret-down{
+    transform:rotate(-180deg);
+}
+.nav__dropdown-active .nav__dropdown{
+    display: block;
+}
+
+
+/*------DARK THEME------*/
+.dark header{
+    background-color: var(--dark-bg-header);
+}
+.dark .header__title h1{
+    color: var(--dark-c-header);
+}
+.dark .menu--span i{
+    color: var(--dark-c-button-menu);
+}
+.dark .nav__navbar{
+    background-color: var(--dark-bg-nav);
+}
+.dark     .nav__desktop .nav__navbar a{
+    color: var(--dark-pc-c-nav);
+}
+.dark .nav__desktop .nav__navbar{
+    color: var(--dark-pc-c-nav);
+}
+.dark .nav__desktop .nav__navbar ul li button{
+    color: var(--dark-pc-c-nav);
+}
+.dark .nav__desktop .nav__dropdown{
+    background-color: var(--dark-bg-header);
+}
+/*---RESPONSIVE TABLET------*/
+@media screen and (min-width: 768px){
+    
+}
+/*---RESPONSIVE DESKTOP------*/
+@media screen and (min-width: 980px){
+/*---HEADER---*/
+
+    header{
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+    .header__title h1{
+        font-size: 40px;
+        right: 90px;
+    }
+    .menu--span{
+        display: none;
+    }
+/*--TOGGLE THEME DARK LIGHT--*/
+    section{
+        display: block;
+    }
+
+/*---NAVBAR---*/
+    .nav__mobile{
+        display: none;
+    }
+    .nav__desktop{
+        display: flex;
+    }
+    .nav__desktop .nav__navbar{
+        background: none;
+        color: var(--pc-c-nav);
+        width: 100%;
+    }
+    .nav__desktop .nav__navbar a{
+        color: var(--pc-c-nav);
+    }
+    .nav__desktop .nav__navbar ul{
+        flex-direction: row;
+        margin: 0;
+    }
+    .nav__desktop .nav__navbar ul li{
+        margin: 0;
+    }
+    .nav__desktop .nav__navbar ul li button{
+        color: var(--pc-c-nav);
+    }
+    .nav__desktop .nav__dropdown{
+        width: 300px;
+        background-color: var(--bg-header);
+        right: 0;
+        left: inherit;
+    }
+    .nav__desktop .nav__dropdown ul{
+        flex-direction: column;
+    }
+}

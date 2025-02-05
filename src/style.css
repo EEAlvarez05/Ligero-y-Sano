@@ -1,0 +1,40 @@
+:root{
+    /*------ASIDE!------*/
+
+        /*---light---*/
+        --bg:#cee2f2;
+        --c-text:#4a4a4a;
+
+        /*---dark---*/
+        --dark-bg:#1d2c35;
+        --dark-c-text:#f5f5f5;
+        
+        /*---fonts---*/
+        --f-principal: "Roboto", serif;
+    }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: var(--f-principal);
+    background-color:var(--bg) ;
+    color: var(--c-text);
+}
+a{
+    text-decoration: none;
+    color: none;
+}
+button{
+    border: none;
+    background: none;
+    font-family: var(--f-principal);
+}
+
+.dark{
+    background-color: var(--dark-bg);
+    color: var(--dark-c-text);
+}
