@@ -168,7 +168,7 @@ section{
 
 /*------NAVBAR ACTIVE-------*/
 .nav__active .nav__mobile{
-    transform: translateX(-100%);
+    transform: translateX(0%);
 }
 .nav__active .menu--span .fa-x{
     display: block;
