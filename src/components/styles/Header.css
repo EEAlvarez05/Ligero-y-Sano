@@ -37,6 +37,7 @@ header{
     align-items: center;
     justify-content: center;
     height: 100px;
+    position: relative;
 }
 .header__title h1{
     color: var(--c-header);
