@@ -22,7 +22,7 @@ function Home() {
             </div>
         </div>
         <div className="main__list">
-            <div className="list--container">
+            <div className="list--container"><a href="/sopas-y-entradas">
                 <div className="list--text">
                     <h4>
                         {Info[4]["Title-recipe"]}
@@ -30,18 +30,18 @@ function Home() {
                 </div>
                 <div className="list--icon">
                     <i className='bx bxs-bowl-hot'></i>
-                </div>
+                </div></a>
             </div>
-            <div className="list--container">
+            <div className="list--container"><a href="/carnes">
                 <div className="list--text">
                     <h4>
                         {Info[2]["Title-recipe"]}</h4>
                 </div>
                 <div className="list--icon">
                     <i className="fa-solid fa-drumstick-bite"></i>
-                </div>
+                </div></a>
             </div>
-            <div className="list--container">
+            <div className="list--container"><a href="/pescados">
                 <div className="list--text">
                     <h4>
                         {Info[1]["Title-recipe"]}
@@ -49,18 +49,18 @@ function Home() {
                 </div>
                 <div className="list--icon">
                     <i className="fa-solid fa-fish"></i>
-                </div>
+                </div></a>
             </div>
-            <div className="list--container">
+            <div className="list--container"><a href="/ensaladas-y-verduras">
                 <div className="list--text">
                     <h4>
                         {Info[3]["Title-recipe"]}</h4>
                 </div>
                 <div className="list--icon">
                     <i className="fa-solid fa-carrot"></i>
-                </div>
+                </div></a>
             </div>
-            <div className="list--container">
+            <div className="list--container"><a href="/postres">
                 <div className="list--text">
                     <h4>
                         {Info[0]["Title-recipe"]}
@@ -68,7 +68,7 @@ function Home() {
                 </div>
                 <div className="list--icon">
                     <i className="fa-solid fa-ice-cream"></i>
-                </div>
+                </div></a>
             </div>
         </div>
         </main>

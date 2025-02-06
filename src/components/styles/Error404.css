@@ -1,0 +1,32 @@
+.error__container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.error--image img{
+    width: 300px;
+    margin-top: 70px;
+}
+.text--title{
+    text-align: center;
+}
+.text--title h2{
+    font-size: 26px;
+}
+.error--text{
+    padding: 10px;
+}
+.text--text{
+    padding: 10px;
+    text-align: center;
+}
+.text--text p{
+    font-size: 22px;
+}
+
+/*---RESPONSIVE TABLET------*/
+@media screen and (min-width: 768px){}
+/*---RESPONSIVE DESKTOP------*/
+@media screen and (min-width: 980px){}

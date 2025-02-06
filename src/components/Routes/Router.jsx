@@ -5,6 +5,7 @@ import Fish from "../Pages/Fish";
 import Meat from "../Pages/Meat";
 import Salad from "../Pages/Salad";
 import Soup from "../Pages/Soup";
+import Error404 from "../Pages/Error404";
 
 function Rrouter() {
     return (  
@@ -15,6 +16,7 @@ function Rrouter() {
             <Route path="/carnes" element={<Meat />} />
             <Route path="/ensaladas-y-verduras" element={<Salad />} />
             <Route path="/sopas-y-entradas" element={<Soup />} />
+            <Route path="/*" element={<Error404 />} />
         </Routes>
         
     );
