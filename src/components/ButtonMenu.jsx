@@ -8,6 +8,7 @@ function ButtonMenu() {
     }
     useEffect(() => {
         document.querySelector("body").classList.toggle("nav__active")
+        setNavActivate(false)
     },[navActivate])
     return (  
         <button className="header__menu" onClick={ChangeNav}>
