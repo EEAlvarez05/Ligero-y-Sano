@@ -10,11 +10,11 @@ function Rrouter() {
     return (  
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Postres" element={<Dessert />} />
-            <Route path="/Pescados" element={<Fish />} />
-            <Route path="/Carnes" element={<Meat />} />
-            <Route path="/Ensaladas-y-Verduras" element={<Salad />} />
-            <Route path="/Sopas-y-Entradas" element={<Soup />} />
+            <Route path="/postres" element={<Dessert />} />
+            <Route path="/pescados" element={<Fish />} />
+            <Route path="/carnes" element={<Meat />} />
+            <Route path="/ensaladas-y-verduras" element={<Salad />} />
+            <Route path="/sopas-y-entradas" element={<Soup />} />
         </Routes>
         
     );
