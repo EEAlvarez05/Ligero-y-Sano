@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function ButtonMenu() {
-    const [navActivate, setNavActivate] = useState(true)
+    const [navActivate, setNavActivate] = useState(false)
     const ChangeNav = () => {
         setNavActivate(!navActivate)
     }
