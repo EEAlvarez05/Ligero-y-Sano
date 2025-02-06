@@ -2,13 +2,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function ButtonMenu() {
-    const [navActivate, setNavActivate] = useState(false)
-    const ChangeNav = () => {
-        setNavActivate(!navActivate)
-    }
+    const [navActivate, setNavActivate] = useState(true)
     useEffect(() => {
         document.querySelector("body").classList.toggle("nav__active")
     },[navActivate])
+    const ChangeNav = () => {
+        setNavActivate(!navActivate)
+    }
     return (  
         <button className="header__menu" onClick={ChangeNav}>
             <span className="menu--span">
