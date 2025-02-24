@@ -2,14 +2,29 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function ToggleDarkLight() {
-    const [themeDark, setThemeDark] = useState(false)
+    const [themeDark, setThemeDark] = useState(() => {
+        const storedDarkMode = localStorage.getItem("darkMode");
+        if (storedDarkMode === "true") {
+            return true;
+        } else if (storedDarkMode === "false") {
+            return false;
+        } else {
+            const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            return prefersDarkMode;
+        }
+    });
 
     const ChangeTheme = () => {
-        setThemeDark(!themeDark)
+        setThemeDark(!themeDark);
+        localStorage.setItem("darkMode", !themeDark);
     }
     useEffect(() => {
-        document.querySelector("html").classList.toggle("dark")
-    },[themeDark])
+        if (themeDark) {
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark");
+        }
+    }, [themeDark]);
     return (  
         <section>
             <button onClick={ChangeTheme} className="nav__switch">
